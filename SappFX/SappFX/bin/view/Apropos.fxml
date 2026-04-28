@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      alignment="TOP_CENTER" spacing="18"
+      style="-fx-background-color: #f4f6f9;">
+
+    <padding><Insets top="40" right="60" bottom="40" left="60"/></padding>
+
+    <Label text="À propos de Sapp"
+           style="-fx-font-size:26px;-fx-font-weight:bold;-fx-text-fill:#2c3e50;"/>
+
+    <Separator prefWidth="500"/>
+
+    <Label wrapText="true" maxWidth="680"
+           text="Sapp est née en 2021 de la passion de deux amis pour la mode urbaine et le streetwear authentique. Notre mission : rendre le style accessible à tous, sans compromis sur la qualité."
+           style="-fx-font-size:14px;-fx-text-fill:#444;"/>
+
+    <Label wrapText="true" maxWidth="680"
+           text="Aujourd'hui, Sapp propose une gamme complète de vêtements, chaussures et accessoires, pensés pour le quotidien comme pour les sorties. Chaque article est soigneusement sélectionné auprès de fournisseurs responsables."
+           style="-fx-font-size:14px;-fx-text-fill:#444;"/>
+
+    <Separator prefWidth="500"/>
+
+    <Label text="Nos chiffres"
+           style="-fx-font-size:16px;-fx-font-weight:bold;-fx-text-fill:#2c3e50;"/>
+
+    <HBox spacing="30" alignment="CENTER">
+
+        <VBox alignment="CENTER" spacing="4" prefWidth="150"
+              style="-fx-background-color:white;-fx-border-color:#dde1e7;-fx-border-radius:8;-fx-background-radius:8;-fx-padding:16;">
+            <Label text="3 ans" style="-fx-font-size:22px;-fx-font-weight:bold;-fx-text-fill:#2E8B57;"/>
+            <Label text="d'existence" style="-fx-font-size:12px;-fx-text-fill:#777;"/>
+        </VBox>
+
+        <VBox alignment="CENTER" spacing="4" prefWidth="150"
+              style="-fx-background-color:white;-fx-border-color:#dde1e7;-fx-border-radius:8;-fx-background-radius:8;-fx-padding:16;">
+            <Label text="+2 000" style="-fx-font-size:22px;-fx-font-weight:bold;-fx-text-fill:#2E8B57;"/>
+            <Label text="clients satisfaits" style="-fx-font-size:12px;-fx-text-fill:#777;"/>
+        </VBox>
+
+        <VBox alignment="CENTER" spacing="4" prefWidth="150"
+              style="-fx-background-color:white;-fx-border-color:#dde1e7;-fx-border-radius:8;-fx-background-radius:8;-fx-padding:16;">
+            <Label text="100 %" style="-fx-font-size:22px;-fx-font-weight:bold;-fx-text-fill:#2E8B57;"/>
+            <Label text="passion" style="-fx-font-size:12px;-fx-text-fill:#777;"/>
+        </VBox>
+
+    </HBox>
+
+</VBox>

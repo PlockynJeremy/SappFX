@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Button?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="controller.LoginController"
+      alignment="CENTER"
+      spacing="15"
+      style="-fx-background-color: #f4f6f9;">
+
+    <Label text="SAPP — Connexion"
+           style="-fx-font-size: 22px; -fx-font-weight: bold;"/>
+
+    <TextField fx:id="usernameField"
+               promptText="Nom d'utilisateur"
+               prefWidth="250"/>
+
+    <PasswordField fx:id="passwordField"
+                   promptText="Mot de passe"
+                   prefWidth="250"/>
+
+    <Button text="Se connecter"
+            onAction="#handleLogin"
+            prefWidth="200"/>
+
+</VBox>

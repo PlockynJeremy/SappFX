@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="controller.GestionArticlesController"
+      spacing="12"
+      style="-fx-background-color: #f4f6f9;">
+
+    <padding><Insets top="20" right="20" bottom="20" left="20"/></padding>
+
+    <Label text="Gestion des articles"
+           style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-text-fill: #2c3e50;"/>
+
+    <Label fx:id="statusLabel" style="-fx-text-fill: #666;"/>
+
+    <TableView fx:id="tableArticles" VBox.vgrow="ALWAYS" prefHeight="260">
+        <columns>
+            <TableColumn fx:id="colId"      text="Id"      prefWidth="40"/>
+            <TableColumn fx:id="colNom"     text="Nom"     prefWidth="160"/>
+            <TableColumn fx:id="colType"    text="Type"    prefWidth="100"/>
+            <TableColumn fx:id="colCouleur" text="Couleur" prefWidth="80"/>
+            <TableColumn fx:id="colPrix"    text="Prix"    prefWidth="70"/>
+            <TableColumn fx:id="colStock"   text="Stock"   prefWidth="60"/>
+            <TableColumn fx:id="colTaille"  text="Taille"  prefWidth="60"/>
+            <TableColumn fx:id="colGenre"   text="Genre"   prefWidth="80"/>
+        </columns>
+    </TableView>
+
+    <HBox spacing="16" VBox.vgrow="NEVER">
+
+        <TitledPane text="Formulaire article" collapsible="false"
+                    HBox.hgrow="ALWAYS" style="-fx-font-weight: bold;">
+            <GridPane hgap="10" vgap="8">
+                <padding><Insets top="10" right="10" bottom="10" left="10"/></padding>
+
+                <Label text="Nom"         GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+                <TextField fx:id="fieldNom" prefWidth="180"
+                           GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+
+                <Label text="Type"        GridPane.columnIndex="2" GridPane.rowIndex="0"/>
+                <TextField fx:id="fieldType" prefWidth="140"
+                           GridPane.columnIndex="3" GridPane.rowIndex="0"/>
+
+                <Label text="Couleur"     GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+                <TextField fx:id="fieldCouleur" prefWidth="180"
+                           GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+
+                <Label text="Prix (€)"   GridPane.columnIndex="2" GridPane.rowIndex="1"/>
+                <TextField fx:id="fieldPrix" prefWidth="140"
+                           GridPane.columnIndex="3" GridPane.rowIndex="1"/>
+
+                <Label text="Stock"       GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+                <TextField fx:id="fieldStock" prefWidth="180"
+                           GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+
+                <Label text="Taille"      GridPane.columnIndex="2" GridPane.rowIndex="2"/>
+                <TextField fx:id="fieldTaille" prefWidth="140"
+                           GridPane.columnIndex="3" GridPane.rowIndex="2"/>
+
+                <Label text="Genre"       GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+                <TextField fx:id="fieldGenre" prefWidth="180"
+                           GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+
+                <Label text="Description" GridPane.columnIndex="0" GridPane.rowIndex="4"/>
+                <TextField fx:id="fieldDescription" prefWidth="340"
+                           GridPane.columnIndex="1" GridPane.rowIndex="4"
+                           GridPane.columnSpan="3"/>
+            </GridPane>
+        </TitledPane>
+
+        <TitledPane text="Image" collapsible="false"
+                    style="-fx-font-weight: bold;" prefWidth="210">
+            <VBox spacing="8" alignment="TOP_CENTER">
+                <padding><Insets top="10" right="10" bottom="10" left="10"/></padding>
+
+                <ImageView fx:id="imagePreview"
+                           fitWidth="160" fitHeight="120"
+                           preserveRatio="true"
+                           style="-fx-effect: dropshadow(gaussian,rgba(0,0,0,0.1),4,0,0,1);"/>
+
+                <Label fx:id="labelImageNom"
+                       text="Aucune image sélectionnée"
+                       wrapText="true" maxWidth="180"
+                       style="-fx-font-size: 11px; -fx-text-fill: #888;"/>
+
+                <Button text="📁 Choisir une image"
+                        onAction="#handleChoisirImage"
+                        prefWidth="180"
+                        style="-fx-background-color:#2E86C1;-fx-text-fill:white;"/>
+            </VBox>
+        </TitledPane>
+
+    </HBox>
+
+    <HBox spacing="10">
+        <Button text="Ajouter"    onAction="#handleAjouter"    style="-fx-background-color:#2E8B57;-fx-text-fill:white;"/>
+        <Button text="Modifier"   onAction="#handleModifier"   style="-fx-background-color:#2E86C1;-fx-text-fill:white;"/>
+        <Button text="Supprimer"  onAction="#handleSupprimer"  style="-fx-background-color:#C0392B;-fx-text-fill:white;"/>
+        <Button text="Rafraîchir" onAction="#handleRafraichir" style="-fx-background-color:#7f8c8d;-fx-text-fill:white;"/>
+    </HBox>
+
+</VBox>

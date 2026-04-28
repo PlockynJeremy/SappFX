@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="controller.CatalogueController"
+      spacing="12"
+      style="-fx-background-color: #f4f6f9;">
+
+    <padding><Insets top="20" right="20" bottom="20" left="20"/></padding>
+
+    <Label text="Catalogue — Articles en vente"
+           style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-text-fill: #2c3e50;"/>
+
+    <Label fx:id="statusLabel"
+           style="-fx-font-size: 12px; -fx-text-fill: #888;"/>
+
+    <ScrollPane fitToWidth="true" VBox.vgrow="ALWAYS"
+                style="-fx-background-color: transparent; -fx-background: transparent;">
+        <FlowPane fx:id="cardsPane"
+                  hgap="16" vgap="16"
+                  style="-fx-background-color: transparent;">
+            <padding><Insets top="10" right="10" bottom="10" left="10"/></padding>
+        </FlowPane>
+    </ScrollPane>
+
+</VBox>

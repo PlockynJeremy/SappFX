@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="controller.MainController"
+      spacing="0">
+
+    <MenuBar>
+
+        <Menu text="Sapp">
+            <MenuItem text="Home"      onAction="#showHome"/>
+            <MenuItem text="Catalogue" onAction="#showCatalogue"/>
+            <SeparatorMenuItem/>
+            <MenuItem text="Quitter"   onAction="#handleQuit"/>
+        </Menu>
+
+        <Menu text="Compte">
+            <MenuItem text="Se déconnecter" onAction="#handleDeconnexion"/>
+            <MenuItem text="Panier"         onAction="#showPanier"/>
+        </Menu>
+
+        <Menu text="Statistique" fx:id="menuStatistique">
+            <MenuItem text="Top ventes"  onAction="#showTopVentes"/>
+            <MenuItem text="Les plus vus" onAction="#showPlusVus"/>
+        </Menu>
+
+        <Menu text="Gestion du site" fx:id="menuGestionSite">
+            <MenuItem text="Gestion des articles"     onAction="#showGestionArticles"/>
+            <MenuItem text="Gestion des utilisateurs" onAction="#showGestionUtilisateurs"/>
+        </Menu>
+
+        <Menu text="À propos">
+            <MenuItem text="À propos" onAction="#showApropos"/>
+            <MenuItem text="Aide"     onAction="#showAide"/>
+        </Menu>
+
+    </MenuBar>
+
+    <StackPane fx:id="contentPane" VBox.vgrow="ALWAYS"/>
+
+</VBox>

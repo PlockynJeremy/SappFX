@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:id="rootPane"
+      fx:controller="controller.PlusVusController"
+      spacing="12"
+      style="-fx-background-color: #f4f6f9;">
+    <padding><Insets top="20" right="30" bottom="20" left="30"/></padding>
+
+    <Label text="👁️ Les plus vus"
+           style="-fx-font-size:26px; -fx-font-weight:bold; -fx-text-fill:#2c3e50;"/>
+
+    <Label fx:id="statusLabel"
+           text="Chargement..."
+           wrapText="true"
+           style="-fx-font-size:12px; -fx-text-fill:#2980b9; -fx-background-color:#ebf5fb;
+                  -fx-padding:6 10 6 10; -fx-background-radius:4;"/>
+
+    <ScrollPane fitToWidth="true" VBox.vgrow="ALWAYS"
+                style="-fx-background: #f4f6f9; -fx-background-color: #f4f6f9;">
+        <VBox fx:id="chartsBox" spacing="20">
+            <padding><Insets top="10" bottom="10"/></padding>
+        </VBox>
+    </ScrollPane>
+
+</VBox>

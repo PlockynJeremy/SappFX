@@ -1,0 +1,48 @@
+.button {
+    -fx-background-color: #2E8B57;
+    -fx-text-fill: white;
+}
+
+.button:hover {
+    -fx-background-color: #256f46;
+}
+
+.table-view {
+    -fx-font-size: 14px;
+}
+
+.menu-bar {
+    -fx-background-color: #005fc5;
+    -fx-padding: 2px 0;
+}
+
+.menu-bar > .container > .menu-button > .label {
+    -fx-text-fill: white;
+    -fx-font-size: 13px;
+}
+
+.menu-bar > .container > .menu-button:hover,
+.menu-bar > .container > .menu-button:showing {
+    -fx-background-color: #75b7ff;
+}
+
+.context-menu {
+    -fx-background-color: white;
+    -fx-border-color: #cccccc;
+    -fx-border-width: 1px;
+}
+
+.menu-item .label {
+    -fx-text-fill: #222222;
+    -fx-font-size: 13px;
+}
+
+.menu-item:focused,
+.menu-item:hover {
+    -fx-background-color: #005fc5;
+}
+
+.menu-item:focused .label,
+.menu-item:hover .label {
+    -fx-text-fill: white;
+}

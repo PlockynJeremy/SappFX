@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      alignment="TOP_CENTER" spacing="18"
+      style="-fx-background-color: #f4f6f9;">
+
+    <padding><Insets top="40" right="60" bottom="40" left="60"/></padding>
+
+    <Label text="Aide &amp; Contact"
+           style="-fx-font-size:26px;-fx-font-weight:bold;-fx-text-fill:#2c3e50;"/>
+
+    <Separator prefWidth="500"/>
+
+    <Label text="Notre équipe est disponible du lundi au vendredi, de 9h à 18h."
+           style="-fx-font-size:14px;-fx-text-fill:#555;"/>
+
+    <HBox spacing="24" alignment="CENTER">
+
+        <VBox spacing="8" prefWidth="200"
+              style="-fx-background-color:white;-fx-border-color:#dde1e7;-fx-border-radius:8;-fx-background-radius:8;-fx-padding:20;">
+            <Label text="📧 Email" style="-fx-font-weight:bold;-fx-font-size:14px;"/>
+            <Label text="contact@sapp-store.fr" style="-fx-font-size:13px;-fx-text-fill:#2E8B57;"/>
+            <Label text="Réponse sous 24h." style="-fx-font-size:11px;-fx-text-fill:#999;"/>
+        </VBox>
+
+        <VBox spacing="8" prefWidth="200"
+              style="-fx-background-color:white;-fx-border-color:#dde1e7;-fx-border-radius:8;-fx-background-radius:8;-fx-padding:20;">
+            <Label text="📞 Téléphone" style="-fx-font-weight:bold;-fx-font-size:14px;"/>
+            <Label text="+33 1 23 45 67 89" style="-fx-font-size:13px;-fx-text-fill:#2E8B57;"/>
+            <Label text="Lun–Ven  9h–18h" style="-fx-font-size:11px;-fx-text-fill:#999;"/>
+        </VBox>
+
+        <VBox spacing="8" prefWidth="200"
+              style="-fx-background-color:white;-fx-border-color:#dde1e7;-fx-border-radius:8;-fx-background-radius:8;-fx-padding:20;">
+            <Label text="📍 Adresse" style="-fx-font-weight:bold;-fx-font-size:14px;"/>
+            <Label text="12 rue de la Mode" style="-fx-font-size:13px;-fx-text-fill:#2E8B57;"/>
+            <Label text="75011 Paris, France" style="-fx-font-size:11px;-fx-text-fill:#999;"/>
+        </VBox>
+
+    </HBox>
+
+    <Separator prefWidth="500"/>
+
+    <Label text="FAQ rapide" style="-fx-font-size:16px;-fx-font-weight:bold;-fx-text-fill:#2c3e50;"/>
+
+    <VBox spacing="8" maxWidth="620">
+        <Label wrapText="true" text="❓ Comment suivre ma commande ? → Un email de suivi vous est envoyé dès l'expédition."
+               style="-fx-font-size:13px;-fx-text-fill:#444;"/>
+        <Label wrapText="true" text="❓ Puis-je retourner un article ? → Oui, sous 30 jours après réception."
+               style="-fx-font-size:13px;-fx-text-fill:#444;"/>
+        <Label wrapText="true" text="❓ Les tailles sont-elles fidèles ? → Oui, consultez notre guide des tailles dans la fiche article."
+               style="-fx-font-size:13px;-fx-text-fill:#444;"/>
+    </VBox>
+
+</VBox>
